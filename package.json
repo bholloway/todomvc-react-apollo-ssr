@@ -1,0 +1,82 @@
+{
+  "name": "todomvc",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "7.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "classnames": "^2.2.5",
+    "cross-env": "^5.1.0",
+    "css-loader": "0.28.7",
+    "dotenv": "4.0.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^4.15.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "1.1.5",
+    "fs-extra": "3.0.1",
+    "object-assign": "4.1.1",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8",
+    "prettier": "^1.9.2",
+    "promise": "8.0.1",
+    "prop-types": "^15.5.10",
+    "raf": "3.4.0",
+    "react-addons-test-utils": "^15.5.1",
+    "style-loader": "0.19.0",
+    "sw-precache-webpack-plugin": "0.11.4",
+    "todomvc-app-css": "^2.1.0",
+    "url-loader": "0.6.2",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4",
+    "webpack-manifest-plugin": "1.3.2",
+    "whatwg-fetch": "2.0.3"
+  },
+  "dependencies": {
+    "@std/esm": "^0.19.1",
+    "babel-preset-react-app": "^3.1.0",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dev-utils": "^4.2.1",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.5.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "lint": "eslint src",
+    "prettier": "prettier --write 'index.js' 'src/**/*.js'"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "parser": "flow",
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "arrowParens": "always"
+  },
+  "homepage": "http://localhost:3000"
+}
