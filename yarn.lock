@@ -4096,6 +4096,10 @@ object-keys@^1.0.11, object-keys@^1.0.8:
   version "1.0.11"
   resolved "https://registry.npmjs.org/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
+object-to-querystring@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/object-to-querystring/-/object-to-querystring-1.0.8.tgz#0d0e589d3583360cfdc32ebd60bb791c96b83ad3"
+
 object.assign@^4.0.4:
   version "4.1.0"
   resolved "https://registry.npmjs.org/object.assign/-/object.assign-4.1.0.tgz#968bf1100d7956bb3ca086f006f846b3bc4008da"
