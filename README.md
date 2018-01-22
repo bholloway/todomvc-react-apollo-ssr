@@ -18,6 +18,9 @@ The api server (with graphiql) is on `http://localhost:4000`.
 
 ## Development
 
+The [main reference](https://github.com/apollographql/apollo-client/blob/master/docs/source/recipes/server-side-rendering.md)
+explains what we are trying to do.
+
 ```sh
 yarn lint
 yarn prettier
@@ -25,8 +28,8 @@ yarn prettier
 
 ## Further work
 
-* ~~Use GET for GraphQL instead of POST to prove CDN is plausable.~~
-* Fix OPTIONS for client api queries
 * Mutation for todos from GraphQL.
+* Try apollo-server and subscriptions.
 * Cleanup Webpack config and scripts (i.e. ejected from
 create-react-app).
+* Cleanup todomvc implementation (i.e. make it feature centric)

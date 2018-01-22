@@ -30,7 +30,8 @@ const enhance = compose(
           completed
         }
       }
-    `, {
+    `,
+    {
       options: () => ({pollInterval: 5000})
     }
   ),

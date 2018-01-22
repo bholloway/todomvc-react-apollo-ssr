@@ -7,15 +7,15 @@ import {ApolloProvider, getDataFromTree} from 'react-apollo';
 import {ApolloClient} from 'apollo-client';
 import {InMemoryCache} from 'apollo-cache-inmemory';
 import fetch from 'node-fetch';
-import {createHttpLink} from 'apollo-link-http';
 import morgan from 'morgan';
 
 import reducer from './reducers';
-import {API_PORT, directLink} from './apiServer';
+import {API_PORT, createDirectLink} from './apiServer';
 import {App} from '../build/static/js/app';
+import {createHttpLink} from './api/link';
 
 export const WEB_PORT = 3000;
-export const DIRECT_LINK = true;
+export const DIRECT_LINK = false;
 
 const web = Express();
 
@@ -23,7 +23,6 @@ web.use(morgan('dev'));
 
 web.use('/static', Express.static('build/static'));
 
-// https://github.com/apollographql/apollo-client/blob/master/docs/source/recipes/server-side-rendering.md
 web.get('/', (req, res) => {
   // redux
   const store = createStore(reducer);
@@ -32,7 +31,9 @@ web.get('/', (req, res) => {
   const client = new ApolloClient({
     ssrMode: true,
     cache: new InMemoryCache(),
-    link: DIRECT_LINK ? directLink : createHttpLink({uri: `http://localhost:${API_PORT}/`, fetch})
+    link: DIRECT_LINK
+      ? createDirectLink()
+      : createHttpLink({uri: `http://localhost:${API_PORT}/`, fetch})
   });
 
   // react
