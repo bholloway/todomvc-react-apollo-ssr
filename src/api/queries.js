@@ -19,9 +19,11 @@ const TodoType = new GraphQLObjectType({
   })
 });
 
+const TodosType = new GraphQLList(TodoType);
+
 export const todos = {
   name: 'todo list',
   description: 'list of todos from graphql',
-  type: new GraphQLList(TodoType),
+  type: TodosType,
   resolve: () => [{}]
 };
