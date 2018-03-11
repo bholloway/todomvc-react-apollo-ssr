@@ -2,13 +2,11 @@ import Express from 'express';
 import expressGraphQL from 'express-graphql';
 import cors from 'cors';
 import morgan from 'morgan';
-import {SchemaLink} from 'apollo-link-schema';
 
-import schema from './api';
+import {schema} from './api';
+export {createDirectLink} from './api';
 
 export const API_PORT = 4000;
-
-export const createDirectLink = () => new SchemaLink({schema});
 
 const gql = expressGraphQL((_req, _res, {query, variables}) => {
   if (query) {
